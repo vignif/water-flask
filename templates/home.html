@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Hello from the cool water app!</h3>
+
+<form method="post">
+  <div class="form-group row">
+    <label for="on" class="col-sm-2 col-form-label">Turn the pump on</label>
+    <div class="col-sm-10">
+      <button type="submit" name="on" class="btn btn-primary mb-2">ON</button>
+    </div>
+  </div>
+</form>
+
+<form method="post">
+  <div class="form-group row">
+    <label for="off" class="col-sm-2 col-form-label">Turn the pump off</label>
+    <div class="col-sm-10">
+      <button type="submit" name="off" class="btn btn-primary mb-2">OFF</button>
+    </div>
+  </div>
+</form>
+
+{% if message %}
+<h3> {{ message }}</h3>
+{% endif %}
+
+{% endblock %}
