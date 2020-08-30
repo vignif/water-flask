@@ -1,28 +1,57 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container" style="max-width:900px;">
 
-<h3>Hello from the cool water app!</h3>
+<div class="jumbotron" style="padding-top:2rem; margin-top:2rem;">
 
+<div class="col-xs-1" align="center">
+  <a href="/" style="color:unset;"><h4>Water Pump Control</h4></a>
+</div>
+<hr>
 <form method="post">
   <div class="form-group row">
-    <label for="on" class="col-sm-2 col-form-label">Turn the pump on</label>
-    <div class="col-sm-10">
-      <button type="submit" name="on" class="btn btn-primary mb-2">ON</button>
+    <label for="on" class="col-md-6 col-form-label">Turn the pump on</label>
+    <div class="col">
+      <button type="submit" name="on" class="btn btn-success mb-2">ON</button>
     </div>
   </div>
 </form>
 
 <form method="post">
   <div class="form-group row">
-    <label for="off" class="col-sm-2 col-form-label">Turn the pump off</label>
-    <div class="col-sm-10">
-      <button type="submit" name="off" class="btn btn-primary mb-2">OFF</button>
+    <label for="off" class="col-md-6 col-form-label">Turn the pump off</label>
+    <div class="col">
+      <button type="submit" name="off" class="btn btn-danger mb-2">OFF</button>
     </div>
   </div>
 </form>
+<hr>
+<div class="col-xs-1" align="center">
+  <h4>Select duration</h4>
+</div>
 
+<p>Select for how long you would like the pump to run. The pump will automatically turn off after the specified amount of time.</p>
+<form method="post">
+<div class="row">
+  <div class="col">
+      <input type="number" name="seconds" class="form-control" placeholder="Seconds" required>
+  </div>
+  <div class="col">
+      <button type="submit" name="time" class="btn btn-primary mb-2">Confirm</button>
+  </div>
+</div>
+
+</form>
+
+</div>
 {% if message %}
+<div class="alert alert-success">
+
 <h3> {{ message }}</h3>
+
+</div>
 {% endif %}
+
+</div>
 
 {% endblock %}
