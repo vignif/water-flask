@@ -11,6 +11,11 @@ Once the user visit the desired webpage `localhost:_desired_port` the app will l
 
 ![NN](figures/app.png)
 
+## Todo
+
+The feature *water plants with duration* is currently blocking the app, returning the http response only after the pump finishes its job. 
+It would be great to return the http response right away independently on the user input to the duration of the watering task. Feel free to submit a pr for this ;).
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
