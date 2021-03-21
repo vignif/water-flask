@@ -1,26 +1,19 @@
-# water_flask
+# Let's water them
 Water your home plants with raspberry, a relay and a water pump.
 
-___
-## Todo
-### Software
-- enables automatic deploy of code in raspberry at every pull/startup of the device
-- enables the flask application to store the events and show them to the user
-- The layout could look like
--- /home
--- /logs
+A full description of the project is also available in my [personal blog](https://francescovigni.com/2020/09/17/lets-water-them/).
 
-in /home the user can turn on/off the pump
+The electronics can connections can be summarized by the following sketch
 
-in /home the user can set an ON time for the pump, starting from now, after this time is expired the pump turns off
+![NN](figures/arch.png)
 
-in /logs the user can see all the events (ON/OFF), sorted by date
+Once the user visit the desired webpage `localhost:_desired_port` the app will load:
 
-### Hardware
-- cut plastic tube and fit it to the plants
-- setup a big tank of water (reservoir)
----
+![NN](figures/app.png)
 
-### Future features
-- Enables a calendarized water schedule, the user can create an event on its calendar (google calendar), the raspberry source it and execute the watering for as long as it is asked.
-- enables an always available water (from the main pipe) with a valve
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+**[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2021 © Francesco Vigni
